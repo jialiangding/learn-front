@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+ .box {
+     border: 10px solid red;
+     margin: 100px;
+     /* vertical-align: middle; */
+ }
+ /* 解决方案 */
+ img{
+     vertical-align: bottom;
+ }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <img src="./images/ldh.jpg" alt="">jpg
+    </div>
+    
+    <span>空白缝隙的问题</span>
+    <div class="box2">
+        <img src="./images/Snipaste_2022-06-19_10-12-41.png" alt="">
+    </div>
+
+
+    解决方案1： img{
+        vertical-align: bottom;
+    }
+    解决方案2： 将图片转换成块级元素： dispaly:block
+
+    
+</body>
+</html>

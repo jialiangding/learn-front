@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+.header{
+    position: relative;
+    height: 200px;
+}
+.serach{
+  position: absolute;
+  left: 600px;
+  margin-left: -100px;
+}
+
+
+.serach input{
+    float: left;
+    width: 200px;
+    border: 1px,solid , rgb(92, 163, 208);
+    /* 修改点击之后的边框的样式 */
+    outline: none;
+    height: 32px;
+}
+.serach button{
+    float: left;
+    height: 32px;
+    width: 45px;
+    font-size: 16px;
+    border: none;
+    color: aliceblue;
+    background-color: rgb(92, 163, 208);
+}
+.tianqi_info{
+    position: absolute;
+    height: 120px;
+    left: 600px;
+    width: 800px;
+    top: 60px;
+    margin-left: -400px;
+}
+.serach_history a{
+    float: left;
+    margin-right: 5px;
+}
+.tianqi_info ul li{
+    text-align: center;
+    float: left;
+    width: 150px;
+    list-style: none;
+    margin-right: 10px;
+}
+.info_high{
+    color: rgb(234, 186, 139);
+}
+.info_type{
+    font-size: 30px;
+    color: rgb(234, 186, 139);
+}
+.info_date{
+    color: rgb(177, 177, 177);
+}
+    </style>
+</head>
+<body>
+    
+    <header class="w header" id="box">
+
+        <div class="serach">
+            <input type="search" @keyup.enter="search"  placeholder="" name="" id="" v-model="city">
+            <button type="button" @click="search" value="搜索">搜索</button>
+            <div class="serach_history" v-for="(item,index) in list">
+                <a href="#"  @click="changecity(item)" v-model="item">{{item}}</a>
+            </div>
+        </div>
+
+        <div class="tianqi_info">
+        <ul>
+
+            <li v-for="(item,index) in citydata">
+                <div class="info_type"><span class="type">{{citydata[index].type}}</span></div>
+       
+                <div class="info_high"><span class="high">{{citydata[index].high}} </span></div>
+                <div class="info_date"><span class="iconfont">{{citydata[index].date}}</span></div>
+              
+            </li>
+           
+        </ul>
+        </div>
+    </header>
+
+    <script>
+new Vue({
+el:"#box",
+data:{
+    city:"",
+    list:[],
+    citydata:[]
+
+},
+methods:{
+search(){
+
+if(this.list.length<3){
+    if(this.list.length===0){
+        this.list.push(this.city)
+    }
+    if(this.chechisexit(this.list,this.city)){
+        this.list.push(this.city)
+    }
+   
+}
+axios.get("http://wthrcdn.etouch.cn/weather_mini?city=" + this.city).then((response) => {
+                    this.citydata = response.data.data.forecast
+                    console.log(this.citydata)
+                })
+},
+changecity(city){
+    this.city=city
+    this.search()    
+},
+chechisexit(list,city){
+    for (let index = 0; index < list.length; index++) {
+        if(lisy[index]===city){
+
+            return false;
+        }
+        
+    }
+
+}
+
+
+}
+
+
+})
+
+
+    </script>
+</body>
+</html>

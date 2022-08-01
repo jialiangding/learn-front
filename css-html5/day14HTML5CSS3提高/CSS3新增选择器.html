@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            list-style: none;
+        }
+/* icon1.2.3.4 变成红色 */
+div[class^=icon]{
+    color: red;
+}
+
+/* 结构伪类选择器 */
+/* 
+nth-child 会把所有盒子都排序 执行时候首先看nth-child(1)
+
+
+*/
+/* 偶数 */
+ul li:nth-child(even){
+    background-color: #ccc;
+}
+
+/*  基数*/
+ul li:nth-child(odd){
+    background-color: green;
+}
+/* 公示  必须是n 从0 开始 每次加1*/
+/* 2n+1 基数  2n 偶数  5n  5的倍数    n+5 从5开始*/
+ol li:nth-child(2n+1){
+    background-color: green;
+}
+
+    </style>
+</head>
+<body>
+
+    <input type="text" name="" id="">
+    <input type="password" name="" id="">
+    <!-- 3. 属性选择器可以选择属性值开头的某些元素 -->
+    <div class="icon1">小图标1</div>
+    <div class="icon2">小图标2</div>
+    <div class="icon3">小图标3</div>
+    <div class="icon4">小图标4</div>
+    <div>我是打酱油的</div>
+    <!-- 4. 属性选择器可以选择属性值结尾的某些元素 -->
+    <section class="icon1-data">我是安其拉</section>
+    <section class="icon2-data">我是哥斯拉</section>
+    <section class="icon3-ico">哪我是谁</section>
+
+   <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+   </ul>
+   <ol>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+   </ol>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+a:link{
+    color: yellow;
+    /* 取消样式 */
+    text-decoration: none; 
+}
+a:visited{
+    color: green;
+}
+a:hover{
+    color: aqua;
+}
+
+.test:focus{
+background-color: red;
+}
+
+    </style>
+</head>
+<body>
+    <h1>链接伪类选择器</h1>
+    <div>a:link     选择所有未被访问的链接</div>
+    <div>a:visited     选择所有已被访问的链接</div> 
+    <div>a:hover     选择鼠标指针位于其上的链接</div> 
+    <div>a:active     选择活动链接</div>  
+
+    <div>LVHA 顺序</div>
+
+    <a href="#">知乎</a>
+
+
+
+    <h1>:focus伪类选择器</h1>
+    <div>用于选取获得焦点的表单元素</div>
+
+    <div>焦点一般是表单</div>
+    <div>input:focus{background-color:yellow
+    }
+    </div>
+
+    <input class="test">
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+var a=false
+var b=true
+console.log(a-1) //boolean 参与 为01
+console.log(b-1)
+
+
+var c=undefined;
+var d=NaN;
+var e=1
+console.log(d)  
+//undefined +nan
+console.log(c+d) //nan
+
+//NAN+数字
+console.log(d+e); //nan
+
+var f=null;
+var z="你好";
+//字符串+null
+console.log(z+f); //你好null
+//数字+nill
+console.log(e+f); //1
+//布尔+null
+console.log(a+f); //0
+
+//转换字符串
+
+console.log(typeof(z)); 
+var zz=e.toString()
+console.log(typeof(zz)); 
+
+console.log(typeof(e+'')); 
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

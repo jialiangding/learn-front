@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+   #box{
+    margin: auto;
+    position: relative;
+    width: 276px;
+    height: 184px;
+   }
+   .left{
+    position: absolute;
+    bottom: 92px;
+   }
+   .right{
+    bottom: 92px;
+    left: 260px;
+    position: absolute;
+   }
+
+
+    </style>
+</head>
+<body>
+    
+<div id="box">
+
+<a href="#"  @click="sub"  v-show="img_index>0" class="left">左</a>
+<img :src="img_arr[img_index]"  alt="">
+
+<a href="#" @click="add" v-show="img_index<img_arr.length-1" class="right">右</a>
+</div>
+
+
+</body>
+<script>
+new Vue({
+
+el:"#box",
+data:{
+   img_arr:["../images/a1.jpg","../images/a2.jpg","../images/a3.jpg","../images/a4.jpg"],
+   img_index:0,
+},
+methods:{
+   
+    sub(){
+        if(this.img_index<=0){
+            this.img_index=0
+        }else{
+            this.img_index-=1;
+        }
+    
+    },
+   add(){
+    if(this.img_index>=this.img_arr.length-1){
+            this.img_index=this.img_arr.length-1
+        }else{
+            this.img_index+=1;
+        }
+       
+       
+    }
+
+
+   
+}
+
+})
+
+</script>
+</html>

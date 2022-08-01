@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .s_ipt {
+            float: left;
+            height: 20px;
+            width: 400px;
+            border-right: none;
+        }
+
+        .search {
+            float: left;
+            height: 24px;
+            border-left: none;
+        }
+
+        #box {
+
+            width: 800px;
+            margin: auto;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .history {
+            float: left;
+        }
+
+        .container {
+            width: 460px;
+            height: 40px;
+        }
+
+        .history_list {
+            
+            height: 40px;
+            width: 460px;
+
+     
+        }
+
+        .history_list a {
+            margin-right: 10px;
+            float: left;
+            display: block;
+            text-decoration: none;
+        }
+
+        .cityinfo {
+            
+            height: 40px;
+        }
+
+        .cityinfo ul li {
+            float: left;
+            margin-right: 20px;
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="box">
+        <div class="container">
+            <h1>天知道</h1>
+            <input class="s_ipt" type="text" v-model="city" @keyup.enter="add"> <input value="搜索" type="button"
+                class="search"></input>
+        </div>
+        <div class="history_list">
+            <a  v-for="(item,index) in list" @click="say(index)">{{item}}</a>
+        </div>
+
+
+        <div class="cityinfo">
+            <ul>
+                <li v-for="(item,index) in citydata">
+                    <div class="info_type"><span class="iconfont">{{citydata[index].type}}</span></div>
+                    <div class="info_date"><span class="iconfont">{{citydata[index].date}}</span></div>
+                    <div class="info_high"><span class="iconfont">{{citydata[index].high}}</span></div>
+                    <div class="info_fengxiang"><span class="iconfont">{{citydata[index].fengxiang}}</span></div>
+                </li>
+            </ul>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+</body>
+<script>
+    new Vue({
+        el: "#box",
+        data: {
+            list: [],
+            city: "",
+            citydata: []
+
+        },
+        methods: {
+            add() {
+                this.list.push(this.city)
+                var that = this
+                axios.get("http://wthrcdn.etouch.cn/weather_mini?city=" + this.city).then((response) => {
+                    that.citydata = response.data.data.forecast
+                    console.log(typeof (that.citydata[0]))
+                })
+
+
+            },
+            say(index) {
+                this.city = this.list[index]
+            }
+        }
+
+    })
+</script>
+
+</html>

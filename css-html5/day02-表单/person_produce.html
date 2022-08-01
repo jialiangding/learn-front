@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历</title>
+</head>
+
+<body>
+
+    <div>
+
+        <h1>合并单元格的方式</h1>
+        <p>
+            <span>跨行合并： rowspan="合并单元格的个数"</span>
+            <span>跨列合并： colspan="合并单元格的个数"</span>
+        </p>
+
+        <h1>目标单元: 写合并代码</h1>
+        <p>
+            <span>跨行：最上侧单元格为目标单元格 写合并单码</span>
+            <span>跨列：最左上侧单元格为目标单元格 写合并单码</span>
+
+        </p>
+    </div>
+
+
+    <table  align="center" border="1" cellspacing="0" width="500"  height="400" >
+        <thead>
+            <tr>
+                <td colspan="5">个人简历</td>
+                <!-- 被合并的删除掉就好 -->
+                <!-- <td></td>
+                <td></td>
+                <td></td>
+                <td></td> -->
+
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td>姓名:</td>
+                <td>1212</td>
+                <td>性别:</td>
+                <td>1212</td>
+                <td rowspan="4"> 照片 </td>
+            </tr>
+            <tr>
+                <td>婚姻状况:</td>
+                <td>1212</td>
+                <td>出生年月:</td>
+                <td>1212</td>
+                <!-- <td>  </td> -->
+            </tr>
+            <tr>
+                <td>民族:</td>
+                <td>1212</td>
+                <td>政治面貌:</td>
+                <td>1212</td>
+                <!-- <td>  </td> -->
+            </tr>
+            <tr>
+                <td>身高:</td>
+                <td>1212</td>
+                <td>学历:</td>
+                <td>1212</td>
+                <!-- <td>  </td> -->
+            </tr>
+
+        </tbody>
+
+
+    </table>
+</body>
+
+</html>

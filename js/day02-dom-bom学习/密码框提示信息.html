@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.tishi span{
+display: none;
+}
+.tishi{
+    float: left;
+}
+.password{
+    float: left;
+}
+
+    </style>
+   
+</head>
+<body>
+    <div class="password">设置密码<input type="password" name="" id="password"></div> 
+    <div class="tishi" ><span>哈哈</span></div>
+
+
+
+
+    <script>
+ var password =document.getElementById("password");
+ var tishi =document.querySelector(".tishi span");
+ 
+ password.onblur=function(){
+     console.log(password.value)
+    if (password.value.length<6){
+        tishi.innerText="密码较短"
+        tishi.style.display='block'
+    }else{
+        tishi.style.display='none'
+    }
+ }
+
+
+
+    </script>
+</body>
+</html>

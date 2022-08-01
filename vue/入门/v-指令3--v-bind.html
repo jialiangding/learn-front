@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <style>
+        img{
+            height: 400px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+   <h2> v-bind 设置元素的属性</h2>
+    
+  <div id="box">
+
+    <!-- v-bind:class="isActive?'active':''" -->
+
+ <button @click="say">点我</button>
+ <!-- <img v-bind:src="img_src" v-bind:class="{active:isActive}"  alt=""> -->
+ <!-- v-bind可以省略 -->
+ <img :src="img_src" :class="{active:isActive}"  alt="">
+
+  </div>
+
+<script>
+
+
+    new Vue({
+     el:"#box",
+     data:{
+        message:"hello",
+        img_src:"../images/vue问题1.jpg",
+        isActive:false
+     },
+     methods:{
+      say(){
+        this.isActive=true
+      }
+
+     }
+
+
+    })
+</script>
+
+</body>
+</html>

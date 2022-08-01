@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.nav{
+    width: 800px;
+    border: 1px solid yellow;
+  
+}
+
+
+  .left{
+    width: 100px;
+    float: left;
+    height: 100px;
+    background-color: red;
+  }
+
+
+  .footer{
+    background-color: green;
+    width: 100px;
+    height: 100px;
+  }
+ 
+.nav::before,.nav::after{
+    content: "";
+    display: table;
+    
+}
+.nav::after{
+clear: both;
+}
+
+
+
+/* 
+.nav::after{
+    content: "";
+    display: block;
+    height: 0;
+    clear:both;
+    visibility: hidden;
+} */
+
+    </style>
+</head>
+<body>
+    
+    <div class="nav">
+        <div class="left"></div>
+        <div class="left"></div>
+    </div>
+    <div class="footer">
+
+
+    </div>
+</body>
+</html>

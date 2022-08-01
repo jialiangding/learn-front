@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.password{
+
+    float: left;
+    
+}
+.password input{
+
+border: none;
+}
+        
+    </style>
+</head>
+<body>
+    <div>
+        <input id="username">
+    </div>
+    <div>
+   <div class="password">
+    <input id="password" type="password"> 
+   </div>
+   <div class="password"><button id="get">get</button></div>
+</div>
+
+
+<script>
+var getp=document.getElementById("get")
+var password=document.getElementById("password")
+getp.onclick=function(){
+if (password.type=="password"){
+    password.type="text"
+}else{
+    password.type="password"
+}
+}
+
+
+
+
+
+</script>
+</body>
+</html>

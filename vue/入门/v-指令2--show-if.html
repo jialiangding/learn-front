@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <style>
+        img{
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>v-show  隐藏元素</h1>
+    <div id="box">
+        <img src="../images/vue问题1.jpg" v-show="age>4" alt="">
+    </div>
+
+<div id="box2">
+    <button @click="qiehuan">点我</button>
+    <p v-if="isshow">我是一个P标签</p>
+</div>
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+<script>
+
+
+
+new Vue({
+el:'#box',
+data:{
+    // v-show可以跟表达式
+  age:10
+}
+
+
+
+})
+
+
+
+
+new Vue({
+el:'#box2',
+data:{
+    // v-show可以跟表达式
+    isshow:true
+},
+methods:{
+    qiehuan(){
+        this.isshow=!this.isshow
+    }
+
+}
+
+
+})
+
+</script>
+</html>

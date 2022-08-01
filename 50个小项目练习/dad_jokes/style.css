@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(103, 112, 217);
+}
+.box{
+    width: 800px;
+    height: 400px;
+    background: rgb(255, 255, 255);
+    margin: auto;
+    margin-top: 200px;
+    overflow:hidden
+}
+
+.jokes{
+    width: 600px;
+    height: 300px;
+    background-color: red;
+    margin: auto;
+    margin-top: 50px;
+    overflow:hidden
+}
+.jokes_text{
+margin: auto;
+text-align: center;
+width: 500px;
+height: 200px;
+background-color: aliceblue;
+margin-top: 50px;
+font-size: 40px;
+}
+
+.next{
+    width: 80px;
+    margin-left: 250px;
+}
+
+

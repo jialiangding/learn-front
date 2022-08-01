@@ -1,0 +1,373 @@
+*{
+
+    padding: 0;
+    margin: 0;
+}
+
+
+/* 版心 */
+.w{
+width: 1200px;
+margin: 0 auto;
+}
+
+ul{
+list-style: none;
+}
+
+a{
+
+    list-style: none;
+}
+
+.header {
+    height: 42px;
+    background-color: red;
+    margin: 30px auto;
+}
+
+
+.logo{
+    float: left;
+    width: 197px;
+    height: 42px;
+    background-color: aqua;
+}
+.nav{
+    float: left;    
+    height: 42px;
+    margin-left: 60px;
+ 
+}
+.nav ul li{
+    float: left;
+    margin: 0 10px;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.nav ul li a{    
+    display: block;
+    padding: 0 8px;
+    height: 42px;
+   
+    line-height: 42px;
+    font-size: 18px;
+    color: black;  
+}
+
+.nav ul li a:hover{
+
+    /* 添加下划线 */
+    border-bottom: 2px solid blue;
+}
+
+
+.search {
+    margin-left: 50px;
+    float: left;
+    height: 42px;
+    width: 412px;
+    background-color: skyblue;
+
+}
+
+.search input{
+    float: left;
+    font-size: 14px;
+    color: rgb(210, 212, 211);
+    padding-left: 15px;
+    width: 345px;
+    height: 40px;
+    border: 1px  solid #00a4ff ;
+    border-right: none;
+
+}
+.search button{
+    /* 行内块元素中间有缝隙 */
+    float: left;
+    width: 50px;
+    height: 42px;
+   /* button默认有边框 手动去除 */
+   border: 0;
+   background-image: url(./img/btn.png);
+
+}
+
+
+.user {
+    float: right;
+    margin-right: 30px;
+    color: #666;
+    line-height: 42px;
+    font-size: 14px;
+}
+ 
+.banner{
+height: 421px ;
+background-color: blue;
+
+}
+
+.banner .w{
+    height: 421px ;
+    background-image: url(./img/banner2.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+
+}
+
+
+.subnav{
+
+    float: left;
+
+    width: 190px;
+    height: 421px;
+    /* 半透明 */
+    background-color: rgb(0, 0, 0,0.3);
+}
+
+.subnav ul li a{
+    font-size: 14px;
+    color: aliceblue ;
+}
+
+.subnav ul li{
+
+height: 45px;
+line-height: 45px;
+padding: 0 20px;
+
+
+}
+
+.subnav ul li a span{
+    
+    float: right;
+}
+.subnav ul li a:hover{
+color: blue;
+}
+
+
+/* banner-课程 */
+.course{
+    float: right;
+    width: 230px;
+    height: 320px;
+    background-color: #fff;
+    float: right;
+    text-align: center;
+    /* 浮动的盒子不会有外边距合并的问题  如果没有浮动 子盒子给了一个margin 那么就会父盒子贴在一起  */
+    margin-top: 50px;
+}
+
+
+
+
+.course h2{
+    height: 48px;
+    background-color: #9bceea;
+    text-align: center;
+    line-height: 48px;
+    font-size: 18px;
+    color: white;
+
+}
+
+.bd{
+padding: 0 20px;
+}
+.bd ul li{
+    /* 上下15 左右0 */
+    padding: 14px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+
+
+
+.bd ul li h4{
+font-size: 16px;
+color: #4e4e4e;
+}
+
+.bd ul li p{
+    font-size: 14px;
+    color: #a5a5a5
+    }
+
+.more {
+    display: block;
+    height: 38px;
+    border: 1px solid #00a4ff;
+    color: #00a4ff ;
+    line-height: 38px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 5px;
+
+
+
+}
+
+
+/* 精品推荐模块 */
+.goods{
+
+    background-color: #00a4ff;
+    height: 60px;
+    /* 行高会继承 */
+    line-height: 60px;
+    background-color: #fff;
+    /* 给阴影 */
+    margin-top: 10px;
+    box-shadow: 0 4px 3px rgb(0, 0, 0,0.3);
+}
+
+.goods ul li{
+ 
+    padding: 0 20px;
+    float: left;
+  
+   
+}
+.goods div{
+    float: left;
+    margin-left: 20px ;
+}
+
+.goods ul li a{
+    font-size: 16px;
+    padding: 0 15px;
+    border-left: 1px solid black;
+}
+
+.mod{
+    margin-right: 30px;
+    float: right;
+}
+
+.box{
+    background-color: rgb(243, 247, 248);
+}
+
+
+.clearfix:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear:both;
+    visibility: hidden;
+}
+.box ul {
+width: 1300px;
+background-color: #666;
+}
+
+/* 把li的父亲ul修改的足够宽  */
+.box ul li{
+
+
+   float: left;
+   margin-right: 15px;
+   margin-bottom: 15px;
+   height:270px;
+   position: relative;
+   width: 228px;
+   background-color: white;
+}
+
+.pg1 {
+    width:100% ;
+}
+.hot{
+ position: absolute;
+ top: 4px;
+right: -4px;
+
+}
+.box ul li h2{
+    width:228px ;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+
+.people{
+    float: left;
+    color: rgb(174, 175, 173);
+    font-size: 14px;
+   
+}
+.info h4{
+    padding: 15px;
+    text-align: left;
+}
+
+
+
+
+
+.level{
+    padding-left    : 15px;
+    color: rgb(227, 180, 137);
+    float: left;
+    font-weight: 10px;
+    font-size: 14px;
+    margin-right: 30px;
+}
+
+
+.footer{
+    height: 415px;
+    background-color: white;
+}
+
+.footer_info div{
+    background-color: white;
+    height: 415px;
+}
+
+.w .produce{
+    width: 400px;
+    height: 280px;
+    float: left;
+
+}
+.w .target{
+    width: 600px;
+    height: 280px;
+ float: right;
+}
+
+.produce .info{
+    margin-top: 5px;
+font-size: 12px;
+height:40px ;
+
+}
+
+.produce .target_app{
+border: 1px solid blue;
+width: 120px;
+height: 40px;
+text-align: center;
+line-height: 40px;
+color: blue;
+display: block;
+margin-top: 15px;
+}
+
+
+
+.target dl{
+    float: right;
+    width: 100px;
+    margin-left: 100px;
+   
+}

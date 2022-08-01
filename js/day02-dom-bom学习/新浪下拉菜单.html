@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin: auto;
+            height: 20px;
+            background-color: red;
+            width: 400px;
+        }
+
+        .container li a{
+            display: block;
+           
+        }
+
+        .container >li{
+            list-style: none;
+            float: left;
+            text-decoration: none;
+            margin-left: 20px;
+            width: 80px;
+            height: 41px;
+        }
+      .container ul li{
+          list-style: none;
+      }
+
+    
+   
+
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="container">
+       
+        <li>
+            <a href="#">微博</a>
+            <ul >
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+            </ul>
+        
+        </li>
+        <li>
+            <a href="#">邮箱</a>
+            <ul>
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+            </ul>
+
+        </li>
+        <li>
+            <a href="#">博客</a>
+            <ul>
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+            </ul>
+        </li>
+    </div>
+
+
+    <script>
+
+        var containers=document.querySelector(".container")
+        var lis=containers.children
+        console.log(lis)
+     for (let index = 0; index < lis.length; index++) {
+         lis[index].onmouseover=function(){
+            this.children[1].style.display = 'block';
+         }
+         lis[index].onmouseout = function() {
+                this.children[1].style.display = 'none';
+         
+     }
+    }
+
+
+
+    </script>
+
+</body>
+
+</html>
